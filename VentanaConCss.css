@@ -15,7 +15,6 @@ body{
 	max-width: 1000px;
 	margin: 20px auto;
 	overflow: hidden;
-
 }
 
 header{
@@ -152,7 +151,7 @@ footer {
 	background: #000;
 	overflow: hidden;/*clear:bouth; para empezar en una nueva linea*/
 	color: #fff;
-	padding: 15px 0;
+	
 	text-align: center;
 
 }
