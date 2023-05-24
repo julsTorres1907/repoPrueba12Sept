@@ -19,48 +19,35 @@ body{
 
 header{
 	background: #fff;
-
-
+	/* justify-content: space-around; */
 }
 
-header nav{
+/* Posicionamiento de los elementos de la etiqueta '<nav>' organizados con Flexbox */
+.menu_principal {
 	width: 100%;
-
-
-
-}
-
-header nav ul{
-
-
-	width: 100%;
-	overflow: hidden;
-	list-style: none;
-
-
+	overflow: scroll;
+	display: flex;
+	justify-content: space-between;
 }
 
 
-header nav ul li {
+.menu_principal li {
+	/* justify-content: space-between; */
 	float: left;
-
-
-
+	list-style: none;
 }
 
-header nav ul li a{
-
+.menu_principal li a{
 	text-decoration: none;
 	display: inline-block;
-	padding: 15px 56px;
+	padding: 15px 80px;
 	color: #000;
 }
 
 
-header nav ul li a:hover{
+.menu_principal li a:hover{
 	background: #000;
 	color: #fff;
-
 }
 
 .tabulador{
@@ -69,9 +56,9 @@ header nav ul li a:hover{
 
 .main{
 	width: 70%;
+	height: 100%;
 	background: #fff;
 	float: left;
-
 }
 
 .main .imagen{
@@ -84,7 +71,6 @@ header nav ul li a:hover{
 
 .posts{
 	padding: 40px;
-
 }
 
 .main .posts article h2{
@@ -95,11 +81,11 @@ header nav ul li a:hover{
 .main .posts article p{
 	margin-bottom: 15px;
 	line-height: 27px;
-
 }
 
 aside{
 	width: 30%;
+	height: 100%;
 	background: #161f26;
 	padding: 20px;
 	color:#fff;
@@ -108,37 +94,27 @@ aside{
 
 aside .widget{
 	margin-bottom: 20px;
-
-
 }
 aside .widget .titulo{
-
 	color: #ff8000;
 	border-bottom: 1px solid #ff8000;
 	margin-bottom: 3px;
-	
-
 }
 aside .widget ul{
 	list-style: none;
-	
 }
 aside .widget ul li{
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
 } 
 
 aside .widget ul li a{
 	color: #fff;
 	text-decoration: none;
-
 }
 
 
 aside .widget ul li a:hover{
-
 	color: #8f8f8f;
-
 }
 
 
@@ -151,21 +127,107 @@ footer {
 	background: #000;
 	overflow: hidden;/*clear:bouth; para empezar en una nueva linea*/
 	color: #fff;
-	
 	text-align: center;
-
+	display: inline-block;
+	padding: 40px 80px;
 }
 
-@media screen and (max-width:800px){
+/*Para computadoras*/
+
+@media only screen and (max-width: 1024px) {
+	body{
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 20px;
+		background: #F5F0BB;
+	}
+	header{
+		background-color: #73A9AD;
+	}
+	.menu_principal {
+		overflow: inherit;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.menu_principal li a{
+		text-decoration: none;
+		display: inline-block;
+		padding: 15px 70px;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-size: 22px;
+		color: #000;
+	}
+
+	.menu_principal li a:hover{
+		background: #DBDFAA;
+		color: #E57C23;
+	}
+
+	.main{
+		background-color: #73A9AD;
+	}
+
+	aside{
+		background-color: #B3C890;
+	}
+
+	footer{
+		background-color: #73A9AD;
+		color: #E57C23;
+	}
+}
+
+/*Para tablets*/
+@media only screen and (max-width: 768px){
+	header{
+		background-color: #ff8000;
+	}
+	nav{
+		width: 100%;
+	}
+	.menu_principal{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.menu_principal li a{
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-size: 20px;
+		padding: 15px 300px;
+	}
+	.main{
+		margin-top: 20px;
+		width: 80%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	aside{
+		width: 20%;
+	}
+}
+
+/* Para pantallas de telefono */
+@media only screen and (max-width:480px){
+	nav{
+		width: 100%;
+	}
+	.menu_principal{
+		/* width: 100%; */
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	body{
+		background: #47A992;
+	}
 	.main{
 		width: 100%;
 	}
 	aside{
 		width: 100%;
 	}
-
 	footer{
 		width: 100%;
 	}
-
 }
